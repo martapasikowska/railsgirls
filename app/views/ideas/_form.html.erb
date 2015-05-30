@@ -29,6 +29,12 @@
   <%= f.collection_select :category_id, Category.all, :id, :name, prompt: true %>
 </div>
 
+<div class="field">
+  <%= f.label :rate %><br>
+<%= f.select 'rating', options_for_select((1..5).collect { |nr| [nr, nr]}) %>
+</div>
+
+
 
   <div class="actions">
     <%= f.submit %>
